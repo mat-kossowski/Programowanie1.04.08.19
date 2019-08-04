@@ -1,4 +1,4 @@
-package pl.sdaacademy;
+package pl.sdaacademy.books;
 
 public class Book {
 

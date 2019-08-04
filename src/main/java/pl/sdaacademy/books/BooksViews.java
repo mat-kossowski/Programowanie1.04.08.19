@@ -1,5 +1,6 @@
 package pl.sdaacademy.books;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class BooksViews {
@@ -9,16 +10,25 @@ public class BooksViews {
         this.scanner = scanner;
     }
 
-    public int startMenu(){
+    public int startMenu() {
         System.out.println("1. Authors");
         System.out.println("2. Books");
         System.out.println("0. Koniec");
+        return getDecision();
+    }
 
+    private int getDecision() {
         int menu = scanner.nextInt();
         scanner.nextLine();
         return menu;
-
     }
 
+    public int authorsMenu(List<Author> authors) {
+        authors.stream()
+                .forEach(author -> System.out.println(author));
+        System.out.println();
+        System.out.println("0. Wroc");
+        return getDecision();
+    }
 
 }
