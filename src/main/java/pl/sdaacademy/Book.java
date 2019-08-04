@@ -6,15 +6,28 @@ public class Book {
     private String name;
     private int releaseYear;
     private int pages;
+    private Author author;
 
 
     public Book() {
     }
 
-    public Book(String name, int releaseYear, int pages) {
+    public Book(String name, int releaseYear, int pages, Author author) {
         this.name = name;
         this.releaseYear = releaseYear;
         this.pages = pages;
+        this.author = author;
+    }
+
+
+
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     public String getName() {

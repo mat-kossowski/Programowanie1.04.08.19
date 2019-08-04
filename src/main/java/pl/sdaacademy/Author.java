@@ -1,5 +1,7 @@
 package pl.sdaacademy;
 
+import java.util.Objects;
+
 public class Author {
 
     String firstname;
@@ -57,5 +59,22 @@ public class Author {
 
     public void setNatrion(Nationality natrion) {
         this.natrion = natrion;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return birthyear == author.birthyear &&
+                Objects.equals(firstname, author.firstname) &&
+                Objects.equals(lastname, author.lastname) &&
+                natrion == author.natrion;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstname, lastname, birthyear, natrion);
     }
 }
