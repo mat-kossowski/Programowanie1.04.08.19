@@ -1,7 +1,5 @@
 package pl.sdaacademy.books;
 
-import pl.sdaacademy.Nationality;
-
 import java.util.Objects;
 
 public class Author {

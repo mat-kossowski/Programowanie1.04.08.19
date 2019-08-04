@@ -44,7 +44,8 @@ public class BooksStart {
             switch (decision) {
 
                 case 1:
-                    //TODO
+                    Nationality nation = views.getNation();
+
                 default:
                     flag = false;
             }

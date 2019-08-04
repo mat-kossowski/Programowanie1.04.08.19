@@ -17,7 +17,16 @@ public class BooksViews {
         return getDecision();
     }
 
-    private int getDecision() {
+    public int getDecision() {
+        return scanner.nextInt();
+    }
+
+    public Nationality getNation() {
+        String nationAsString = scanner.nextLine();
+        return Nationality.valueOf(nationAsString);
+    }
+
+    public int getDecisionAfterEnter() {
         int menu = scanner.nextInt();
         scanner.nextLine();
         return menu;
@@ -27,8 +36,10 @@ public class BooksViews {
         authors.stream()
                 .forEach(author -> System.out.println(author));
         System.out.println();
+        System.out.println("1. Find by Nationality (PL, USA, ENG)");
+        System.out.println("1. Find by after birthYear");
         System.out.println("0. Wroc");
-        return getDecision();
+        return getDecisionAfterEnter();
     }
 
 }

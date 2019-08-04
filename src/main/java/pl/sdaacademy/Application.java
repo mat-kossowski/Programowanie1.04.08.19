@@ -1,10 +1,11 @@
 package pl.sdaacademy;
 
 import pl.sdaacademy.books.Author;
+import pl.sdaacademy.books.Nationality;
 
 import java.util.*;
 
-import static pl.sdaacademy.Nationality.*;
+import static pl.sdaacademy.books.Nationality.*;
 
 public class Application {
     public static void main(String[] args) {

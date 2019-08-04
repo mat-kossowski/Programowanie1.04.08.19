@@ -1,11 +1,10 @@
 package pl.sdaacademy.books;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static pl.sdaacademy.Nationality.*;
-import static pl.sdaacademy.Nationality.ENG;
+import static pl.sdaacademy.books.Nationality.*;
+import static pl.sdaacademy.books.Nationality.ENG;
 
 public class InMemoryAuthorsRepository implements AuthorsRepository {
 
@@ -19,6 +18,12 @@ public class InMemoryAuthorsRepository implements AuthorsRepository {
     @Override
     public List<Author> findAll() {
         return new ArrayList<>(authors);
+    }
+
+    @Override
+    public List<Author> findByNation(Nationality nationality) {
+        //TODO
+        return null;
     }
 
 
