@@ -25,7 +25,6 @@ public class Application {
                 new Author("William", "Shakespeare", 1564, ENG));
 
 
-
         System.out.println(groupByNation(authors));
 
     }
@@ -56,22 +55,14 @@ public class Application {
                 System.out.println(author);
             }
         }
-
     }
-
     private static Map<Nationality, List<Author>> groupByNation(List<Author> authors) {
         Map<Nationality, List<Author>> map = new HashMap<>();
         for (Author author : authors) {
-
             map.putIfAbsent(author.getNatrion(), new ArrayList<>());
             map.get(author.getNatrion()).add(author);
-
-
         }
-
-
-            return map;
-
-        }
-
+        return map;
     }
+
+}
