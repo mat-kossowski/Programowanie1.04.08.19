@@ -2,6 +2,7 @@ package pl.sdaacademy.books;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static pl.sdaacademy.books.Nationality.*;
 import static pl.sdaacademy.books.Nationality.ENG;
@@ -22,8 +23,10 @@ public class InMemoryAuthorsRepository implements AuthorsRepository {
 
     @Override
     public List<Author> findByNation(Nationality nationality) {
-        //TODO
-        return null;
+        return authors.stream()
+                .filter(author -> author.getNatrion().equals(nationality))
+                .collect(Collectors.toList());
+
     }
 
 

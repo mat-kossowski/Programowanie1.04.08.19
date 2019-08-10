@@ -22,7 +22,7 @@ public class BooksViews {
     }
 
     public Nationality getNation() {
-        String nationAsString = scanner.nextLine();
+        String nationAsString = scanner.nextLine().trim();
         return Nationality.valueOf(nationAsString);
     }
 
@@ -39,7 +39,7 @@ public class BooksViews {
         System.out.println("1. Find by Nationality (PL, USA, ENG)");
         System.out.println("1. Find by after birthYear");
         System.out.println("0. Wroc");
-        return getDecisionAfterEnter();
+        return getDecision();
     }
 
 }
