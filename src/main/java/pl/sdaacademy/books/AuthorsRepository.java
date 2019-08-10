@@ -8,4 +8,6 @@ public interface AuthorsRepository {
 
 
     List<Author> findByNation(Nationality nationality);
+
+    List<Author> findAfterBirthYear(int birthYear);
 }
