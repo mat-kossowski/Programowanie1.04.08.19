@@ -77,4 +77,9 @@ public class Author {
     public int hashCode() {
         return Objects.hash(firstname, lastname, birthyear, natrion);
     }
+
+
+    public String getFullName(){
+        return firstname + " " + lastname;
+    }
 }
