@@ -27,27 +27,45 @@ public class BooksViews {
     }
 
     public int getBirthYear(){
-        int birthYear = scanner.nextInt();
-        scanner.nextLine();
-        return birthYear;
+        return readIntAndClearLine();
 
     }
 
 
     public int getDecisionAfterEnter() {
-        int menu = scanner.nextInt();
-        scanner.nextLine();
-        return menu;
+        return readIntAndClearLine();
     }
 
     public int authorsMenu(List<Author> authors) {
-        authors.stream()
-                .forEach(author -> System.out.println(author));
+        authors.forEach(author -> System.out.println(author));
         System.out.println();
         System.out.println("1. Find by Nationality (PL, USA, ENG)");
-        System.out.println("1. Find by after birthYear");
-        System.out.println("0. Wroc");
+        System.out.println("2. Find by after birthYear");
+        System.out.println("0. Back");
+        return getDecision();
+    }
+    public int booksMenu (List<Book> books){
+        books.forEach(book -> System.out.println(book));
+        System.out.println();
+        System.out.println("1. Find by after releaseYear");
+        System.out.println("2. Search by title");
+        System.out.println("3. Search by author");
+        System.out.println("0. Back");
         return getDecision();
     }
 
+    public int getReleaseYear() {
+        return readIntAndClearLine();
+    }
+
+    private int readIntAndClearLine(){
+        int value = scanner.nextInt();
+        scanner.nextLine();
+        return value;
+    }
+
+    public String getSearchPhrase() {
+        String searchPhrase = scanner.nextLine().trim();
+        return searchPhrase;
+    }
 }

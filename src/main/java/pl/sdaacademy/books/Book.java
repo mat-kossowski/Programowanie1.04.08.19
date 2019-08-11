@@ -60,6 +60,7 @@ public class Book {
                 "name='" + name + '\'' +
                 ", releaseYear=" + releaseYear +
                 ", pages=" + pages +
+                ", author=" + author.getFirstname() +" " + author.getLastname()+
                 '}';
     }
 }

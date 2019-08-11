@@ -29,7 +29,7 @@ public class Author {
                 '}';
     }
 
-    public String getFirstname(String blolesław) {
+    public String getFirstname() {
         return firstname;
     }
 
@@ -37,7 +37,7 @@ public class Author {
         this.firstname = firstname;
     }
 
-    public String getLastname(String prus) {
+    public String getLastname() {
         return lastname;
     }
 

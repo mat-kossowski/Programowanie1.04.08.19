@@ -6,10 +6,12 @@ import java.util.Scanner;
 public class BooksStart {
     private BooksViews views;
     private AuthorsRepository authorsRepository;
+    private BooksService booksService;
 
     public BooksStart() {
         this.views = new BooksViews(new Scanner(System.in));
         this.authorsRepository = new InMemoryAuthorsRepository();
+        this.booksService = new BooksService(new InMemoryBooksRepository(authorsRepository));
     }
 
     public void start() {
@@ -33,7 +35,24 @@ public class BooksStart {
     }
 
     private void booksView() {
-        System.out.println("Tutaj będa ksiązki");
+        boolean flag = true;
+        List<Book> books = booksService.findAll();
+        do{
+            int decision = views.booksMenu(books);
+            switch (decision){
+                case 1:
+                    int releaseYear = views.getReleaseYear();
+                    books = booksService.findByAfterReleaseYear(releaseYear);
+                    break;
+                case 2:
+                    String phrase = views.getSearchPhrase();
+                    books = booksService.searchByPhrase(phrase);
+                    break;
+                default:
+                    flag = false;
+            }
+
+        }while (flag);
     }
 
     private void authorsView() {
@@ -41,10 +60,7 @@ public class BooksStart {
         List<Author> authors = authorsRepository.findAll();
         do {
             int decision = views.authorsMenu(authors);
-
-
             switch (decision) {
-
                 case 1:
                     Nationality nation = views.getNation();
                     authors = authorsRepository.findByNation(nation);
