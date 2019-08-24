@@ -1,9 +1,12 @@
 package pl.sdaacademy;
 
+import pl.sdaacademy.books.Author;
+import pl.sdaacademy.books.Book;
+
 import java.util.Arrays;
 import java.util.List;
 
-import static pl.sdaacademy.Nationality.*;
+import static pl.sdaacademy.books.Nationality.*;
 
 public class ApplicationBook {
     public static void main(String[] args) {

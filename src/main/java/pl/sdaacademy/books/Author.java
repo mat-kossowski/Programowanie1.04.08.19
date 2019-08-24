@@ -1,4 +1,4 @@
-package pl.sdaacademy;
+package pl.sdaacademy.books;
 
 import java.util.Objects;
 
@@ -29,7 +29,7 @@ public class Author {
                 '}';
     }
 
-    public String getFirstname(String blolesław) {
+    public String getFirstname() {
         return firstname;
     }
 
@@ -37,7 +37,7 @@ public class Author {
         this.firstname = firstname;
     }
 
-    public String getLastname(String prus) {
+    public String getLastname() {
         return lastname;
     }
 
@@ -76,5 +76,10 @@ public class Author {
     @Override
     public int hashCode() {
         return Objects.hash(firstname, lastname, birthyear, natrion);
+    }
+
+
+    public String getFullName(){
+        return firstname + " " + lastname;
     }
 }

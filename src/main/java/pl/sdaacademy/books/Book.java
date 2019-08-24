@@ -1,4 +1,4 @@
-package pl.sdaacademy;
+package pl.sdaacademy.books;
 
 public class Book {
 
@@ -60,6 +60,7 @@ public class Book {
                 "name='" + name + '\'' +
                 ", releaseYear=" + releaseYear +
                 ", pages=" + pages +
+                ", author=" + author.getFirstname() +" " + author.getLastname()+
                 '}';
     }
 }
