@@ -28,7 +28,7 @@ public class MyLinkedList {
 
     public Integer get(int index) {
 
-        return getElement(index).valeu;
+        return getElement(index).value;
     }
 
 
@@ -83,11 +83,11 @@ public class MyLinkedList {
 
 
     static class MyLinkedListItem{
-        private Integer valeu;
+        private Integer value;
         private MyLinkedListItem nextItem;
 
-        private MyLinkedListItem(Integer valeu){
-            this.valeu = valeu;
+        private MyLinkedListItem(Integer value){
+            this.value = value;
         }
     }
 
