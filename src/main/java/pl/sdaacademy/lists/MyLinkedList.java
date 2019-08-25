@@ -73,7 +73,8 @@ public class MyLinkedList {
     public int size() {
         return size;
     }
-    private MyLinkedListItem getLastItem(){
+
+    private MyLinkedListItem getLastItem() {
         MyLinkedListItem tmpItem = this.head;
         while (tmpItem.nextItem != null) {
             tmpItem = tmpItem.nextItem;
@@ -82,11 +83,11 @@ public class MyLinkedList {
     }
 
 
-    static class MyLinkedListItem{
+    static class MyLinkedListItem {
         private Integer value;
         private MyLinkedListItem nextItem;
 
-        private MyLinkedListItem(Integer value){
+        private MyLinkedListItem(Integer value) {
             this.value = value;
         }
     }
