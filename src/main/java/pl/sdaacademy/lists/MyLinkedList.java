@@ -87,8 +87,8 @@ public class MyLinkedList {
         private Integer value;
         private MyLinkedListItem nextItem;
 
-        private MyLinkedListItem(Integer value) {
-            this.value = value;
+        private MyLinkedListItem(Integer valeu) {
+            this.value = valeu;
         }
     }
 
