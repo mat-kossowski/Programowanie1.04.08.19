@@ -91,7 +91,5 @@ public class MyLinkedListTest {
         Assert.assertEquals((Integer) 20,myLinkedList.get(2));
         Assert.assertEquals((Integer) 30,myLinkedList.get(3));
         Assert.assertEquals((Integer) 40,myLinkedList.get(4));
-
-
     }
 }
